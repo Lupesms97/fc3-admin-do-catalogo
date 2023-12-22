@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 public class CategoryTest {
 
     @Test
-    public void givenAValidParams_whenCallNewCategory_thenInstatiateACategory(){
+    public void givenAvalidParams_whenCallNewCategory_thenInstatiateACategory(){
         final var expectedName = "Filmes";
         final var expectedDescription = "A Categoria mais assistida";
         final var expectedIsActive = true;
@@ -26,8 +26,26 @@ public class CategoryTest {
         Assertions.assertNotNull(actualCategory.getUpdatedAt());
         Assertions.assertNull(actualCategory.getDeletedAt());
 
+    }
 
+    @Test
+    public void givenAIvalidNullName_whenCallNewCategoryandValidate_thenthenShouldThrowAExceptionDomain(){
+        final String expectedName = null;
+        final var expectedMessageError = "'name' should not be null";
+        final var expectedCountError = 1;
+        final var expectedDescription = "A Categoria mais assistida";
+        final var expectedIsActive = true;
 
+        final var actualCategory =
+                Category.newCategory(expectedName, expectedDescription, expectedIsActive);
+
+        final var actualException = Assertions.assertThrows(
+                DomainException.class,
+                () -> actualCategory.validate()
+        );
+
+        Assertions.assertEquals(expectedMessageError, actualException.getErros());
+        Assertions.assertEquals(expectedCountError, actualException.getErrors().size());
 
     }
 

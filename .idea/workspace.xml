@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="108f6e5a-53c1-4d17-9038-231166c4ad63" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/ms/admin/catalogo/domain/AggregateRoot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/ms/admin/catalogo/domain/Entity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/ms/admin/catalogo/domain/Identifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/ms/admin/catalogo/domain/ValueObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/ms/admin/catalogo/domain/category/CategoryID.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/domain/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/ms/admin/catalogo/domain/category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/ms/admin/catalogo/domain/category/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/ms/admin/catalogo/domain/CategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/ms/admin/catalogo/domain/CategoryTest.java" afterDir="false" />
     </list>
@@ -24,17 +27,18 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/domain">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="fc3-admin-do-catalogo" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="fc3-admin-do-catalogo" type="f1a62948:ProjectNode" />
-                <item name="domain" type="2d1252cf:ModuleNode" />
               </path>
             </expand>
             <select />
@@ -43,29 +47,39 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="2Zrm48EUkAxOw3Qn9SOIRn0aAYt" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Gradle.CategoryTest.givenAvalidParams_whenCallNewCategory_thenInstatiateACategory">
     <configuration name="CategoryTest.givenAValidParams_whenCallNewCategory_thenInstatiateACategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -90,8 +104,33 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration name="CategoryTest.givenAvalidParams_whenCallNewCategory_thenInstatiateACategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":domain:test" />
+            <option value="--tests" />
+            <option value="&quot;com.ms.admin.catalogo.domain.CategoryTest.givenAvalidParams_whenCallNewCategory_thenInstatiateACategory&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CategoryTest.givenAvalidParams_whenCallNewCategory_thenInstatiateACategory" />
         <item itemvalue="Gradle.CategoryTest.givenAValidParams_whenCallNewCategory_thenInstatiateACategory" />
       </list>
     </recent_temporary>
